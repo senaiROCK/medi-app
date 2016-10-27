@@ -1,0 +1,95 @@
+<ion-header-bar class="bar-balanced">
+    <h1 class="title">MEDICAL PLANTS</h1>
+</ion-header-bar >
+
+<ion-content style="padding: 15px;">
+
+    <div class="col-md-12">
+        <br>
+        <center><img src="img/logo.png" height="150" width="60%" style="border-radius: 50%;"/></center>
+    </div>
+
+    <div class="list">
+        <br><br>
+        <form ng-submit="login()" novalidate>
+
+            <!-- Check user view -->
+            <div id="form-user">
+                <div class="col-md-12">
+                    <div class="item item-input">
+                        <input type="text" placeholder="Username or Email" ng-model="formData.email" name="" autofocus required/>
+                    </div>
+                </div>
+
+                <div id="user-response" class="col-md-12" style="display: none;"><small class="text-error">{{responseMsg.user}}</small></div>
+
+                <div class="col-md-12">
+                    <button type="submit" class="button button-block button-balanced" type="button">NEXT</button>
+                </div>
+
+                <div class="col-md-12">
+                    <br>
+                    <center><a href="" ng-click="showRegister()">Register</a></center>
+                </div>
+            </div>
+
+            <!-- Check password view -->
+            <div id="form-password" style="display: none;">
+                <div class="col-md-12">
+                    <center><strong>{{formData.email}}</strong></center>
+                </div>
+
+                <div class="col-md-12">
+                    <br>
+                    <div class="item item-input">
+                        <input type="password" placeholder="Password" ng-model="formData.password" name="" autofocus required/>
+                    </div>
+                </div>
+
+                <div id="password-response" class="col-md-12" style="display: none;"><small class="text-error">{{responseMsg.password}}</small></div>
+
+                <div class="col-md-12">
+                    <button type="submit" class="button button-block button-balanced" type="button">LOGIN</button>
+                </div>
+
+                <div class="col-md-12">
+                    <br>
+                    <center><a ng-click="returnView()">Back</a></center>
+                </div>
+            </div>
+        </form>
+
+        <!-- Register -->
+            <div id="form-register" style="display: none;">
+                <form ng-submit="register()" novalidate>
+                    <div class="col-md-12">
+                        <div class="item item-input">
+                            <input type="text" placeholder="Username" ng-model="formData.userName" name="" autofocus required/>
+                        </div>
+                    </div>                
+
+                    <div class="col-md-12">
+                        <div class="item item-input">
+                            <input type="text" placeholder="Email" ng-model="formData.email" name="" required/>
+                        </div>
+                    </div>  
+
+                    <div class="col-md-12">
+                        <div class="item item-input">
+                            <input type="password" placeholder="Password" ng-model="formData.password" name="" required/>
+                        </div>
+                    </div>  
+
+                    <div class="col-md-12">
+                        <button type="submit" class="button button-block button-balanced" type="button">REGISTER</button>
+                    </div>
+
+                    <div class="col-md-12">
+                    <br>
+                    <center><a href="" ng-click="returnView()">Login</a></center>
+                </div>
+                </form>              
+            </div>
+    </div>
+
+</ion-content>

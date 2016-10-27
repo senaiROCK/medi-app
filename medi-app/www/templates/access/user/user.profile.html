@@ -1,0 +1,38 @@
+<ion-view view-title="MY PROFILE">
+    <ion-content>
+        <form ng-submit="updateProfile()" novalidate>
+        	<div class="col-md-12 card" style="padding: 10px;">
+                <div class="col-md-12" ng-if="!formData.profilePhoto">
+                    <img ng-src="{{base + profile.user_profile_photo}}" height="250" width="100%" class="thumb"/>
+                </div>
+                <div class="col-md-12">
+                    <img ng-src="{{formData.imageHolder}}" height="250" width="100%" ngf-thumbnail="formData.profilePhoto"/>
+                </div>
+                <div class="col-md-12">
+                    <input type="file" id="profile_photo" ngf-select ng-model="formData.profilePhoto" name="profile_photo"
+                           accept="image/*" ngf-max-size="50MB" class="left" required/>
+                </div>
+            </div>
+
+            <div class="col-md-12 card" style="padding: 10px;">
+                <input type="text" ng-model="profile.user_username" placeholder="Username" required />
+            </div>
+
+            <div class="col-md-12 card" style="padding: 10px;">
+                <input type="text" ng-model="profile.user_firstname" placeholder="Firstname" required />
+            </div>
+                
+            <div class="col-md-12 card" style="padding: 10px;">
+                <input type="text" ng-model="profile.user_lastname" placeholder="Lastname" required />
+            </div>
+
+            <div class="col-md-12 card" style="padding: 10px;">
+                <input type="text" ng-model="profile.user_email_address" placeholder="Email address" required />
+            </div>
+
+            <div class="col-md-12" style="padding: 10px;">
+                <button type="submit" class="button button-balanced button-full">UPDATE PROFILE</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

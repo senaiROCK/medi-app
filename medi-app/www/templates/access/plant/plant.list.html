@@ -1,0 +1,22 @@
+<ion-view view-title="HERBAL PLANTS">
+    <ion-nav-buttons side="primary">
+        <button class="button btn-success navbar-custom-button" ui-sref="app.plants/add" ng-show="isAdmin">
+            <i class="ion-android-add-circle" style="font-size: 25px;"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list">
+
+            <div class="col-md-12 card" style="padding: 10px;">
+                <input type="text" ng-model="herbalPlantSearch" placeholder="Search herbal plants" required />
+            </div>
+
+            <a ng-repeat="plant in plants | filter: herbalPlantSearch track by $index" class="item item-thumbnail-left" href="#/app/plants/{{plant.plant_id}}/{{plant.plant_name}}">
+                <img ng-src="{{base + plant.plant_pic}}">
+                <h2>{{plant.plant_name}}</h2>
+                <p>{{plant.plant_scientific_name}}</p>
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+ion-content {
+    background-color:#87CEFA;
+    background-image:url('img/background.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+#menu-list {
+    background-color: white;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+    margin-left: 130px;
+
+}
+
+.text-error {
+    color: #ea5252;
+    letter-spacing: 1px;
+}
+
+.navbar-custom-button {
+    border: 0px;
+}
+
+.text-gray {
+    color: gray;
+}

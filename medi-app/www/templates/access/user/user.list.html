@@ -1,0 +1,18 @@
+<ion-view view-title="USERS">
+    <ion-nav-buttons side="primary">
+        <button class="button btn-success navbar-custom-button" ui-sref="app.users/add" ng-if="isAdmin">
+            <i class="ion-android-add-circle" style="font-size: 25px;"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list">
+
+            <a ng-repeat="user in users track by $index" class="item item-thumbnail-left" href="#/app/users/{{user.user_id}}/{{user.user_username}}">
+                <img ng-src="{{base + user.user_profile_photo}}">
+                <h2>{{user.user_username || 'Username'}}</h2>
+                <p>{{user.user_email_address  || 'Email address'}}</p>
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>
